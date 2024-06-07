@@ -12,11 +12,7 @@ globals {
   buckets = { "amazing-one" : "one", "wonderful-two" : "two", "exceptional-three" : "three" }
 
   tags = {
-    Env = "dev"
+    Env   = "dev"
+    Stack = "dev-multiple-buckets"
   }
-
-  # remote_state_data_enabled = true
-  # remote_state_datasources = {
-  # "random-pet" = "stacks/b4ecce97-6d1a-4721-bce6-4e9c061b146d"
-  # }
 }

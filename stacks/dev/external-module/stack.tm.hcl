@@ -8,5 +8,10 @@
 
 # globals {
 #   module = "terraform-aws-modules/s3-bucket/aws"
-#   command = "take tmp_s3 && terraform init -from-module=terraform-aws-modules/s3-bucket/aws"
+
+#   inputs = {
+#     bucket = "staticname123"
+#   }
+
+# #   command = "take tmp_s3 && terraform init -from-module=terraform-aws-modules/s3-bucket/aws"
 # }
