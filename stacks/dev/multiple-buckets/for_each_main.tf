@@ -12,7 +12,7 @@ module "s3_bucket" {
   object_ownership = "ObjectWriter"
   source           = "terraform-aws-modules/s3-bucket/aws"
   tags = {
-    Env   = "dev123"
+    Env   = "dev"
     Stack = "dev-multiple-buckets"
   }
   version = "~> 4.0"
