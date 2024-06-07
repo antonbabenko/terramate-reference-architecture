@@ -1,0 +1,44 @@
+{
+  extends: [
+    'config:recommended',
+    'group:linters',
+    'helpers:pinGitHubActionDigests',
+    ':separateMultipleMajorReleases',
+    ':ignoreUnstable',
+    ':semanticCommits',
+    ':semanticPrefixFixDepsChoreOthers',
+    'customManagers:githubActionsVersions',
+    ':preserveSemverRanges',
+    ':semanticCommitScopeDisabled',
+  ],
+  dependencyDashboardTitle: 'Renovate Dependency Dashboard',
+  dependencyDashboardLabels: [
+    'auto-update',
+  ],
+  dependencyDashboardHeader: 'This issue lists Renovate updates and detected dependencies. Read the [Dependency Dashboard](https://docs.renovatebot.com/key-concepts/dashboard/) docs to learn more.<br>Renovate logs for debug [here](https://developer.mend.io/{{platform}}/{{repository}}).',
+  minimumReleaseAge: '3 days',
+  rollbackPrs: true,
+  addLabels: [
+    'auto-update',
+  ],
+  configMigration: true,
+  prCreation: 'not-pending',
+  vulnerabilityAlerts: {
+    description: 'Be sure that the Dependency graph and Dependabot alerts are enabled for the repo. Details: https://docs.renovatebot.com/configuration-options/#vulnerabilityalerts',
+    enabled: true,
+    addLabels: [
+      'security',
+    ],
+  },
+  commitMessageLowerCase: 'never',
+  prHourlyLimit: 0,
+  terraform: {
+    ignorePaths: [
+      '**/examples/**',
+    ],
+    pinDigests: true,
+  },
+  'pre-commit': {
+    enabled: true,
+  },
+}

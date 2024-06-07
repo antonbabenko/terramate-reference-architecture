@@ -1,0 +1,7 @@
+resource "random_pet" "this" {
+  length = tm_try(global.length, 3)
+}
+
+output "id" {
+  value = random_pet.this.id
+}
