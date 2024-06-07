@@ -19,7 +19,7 @@ globals {
   bucket = "data.terraform_remote_state.random-pet.outputs.id"
 
   tags = {
-    Env = "dev"
+    Env = "dev2"
   }
 
   remote_state_data_enabled = true
